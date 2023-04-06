@@ -18,3 +18,27 @@ alias klcm='kubectl get configmap'
 alias kgcm='kubectl get configmap -o=yaml'
 alias klsec='kubectl get secret'
 alias kgsec='kubectl get secret -o=yaml'
+
+# Terragrunt
+alias tg="terragrunt"
+alias tgfmt="tg hclfmt"
+alias tgi="tgfmt && tg init"
+alias tgI="tgfmt && tg init -upgrade"
+alias tgp="tgfmt && tg plan"
+alias tgP="tgfmt && tg init -upgrade && tg plan"
+alias tga="tgfmt && tg apply"
+alias tgA="tgfmt && tg apply -auto-approve"
+alias tgd="tgfmt && tg destroy"
+alias tgD="tgfmt && tg destroy -auto-approve"
+alias TGFMT="find . -iname '*.hcl' -exec terragrunt hclfmt {} \;"
+
+# Terraform
+alias tf="terraform"
+alias tffmt="tf fmt"
+alias tfi="tffmt && tf init"
+alias tfp="tffmt && tf plan"
+alias tfa="tffmt && tf apply"
+alias tfA="tffmt && tf apply -auto-approve"
+alias tfd="tffmt && tf destroy"
+alias tfD="tffmt && tf destroy -auto-approve"
+alias TFFMT="find . -iname '*.tf' -exec terraform fmt {} \;"
